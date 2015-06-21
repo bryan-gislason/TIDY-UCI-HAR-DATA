@@ -34,4 +34,4 @@ To create this tidy data set manually, follow these steps:
 - subject  (int): the subject of the study
 - activity (character): the labeled activity type that the subject was doing while the data was recorded
 
-The rest of the columns is the mean (int) for the all of the observations of the subject and activity for the mean and std of all of the features, which can be found in the 'features.txt' file.
+The rest of the columns is the mean (int) for the all of the observations of the subject and activity for the mean and std of all of the features, which can be found in the 'features_info.txt' file.
