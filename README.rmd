@@ -1,0 +1,16 @@
+---
+title: "README"
+author: "Bryan Gislason"
+date: "June 21, 2015"
+output: html_document
+---
+
+## Project Description
+This project's goal was to create a tidy data set from the results of the project, "Human Activity Recognition Using Smartphones Dataset". The resulting data was an independent tidy data set with the mean of each variable for each activity and each subject.
+
+## How to run the experiment
+1. Clone this repo
+2. With the repo as the working directory, run source('run_analysis.R')
+3. The output will be written to 'tidyData.txt'
+
+Refer to the 'CodeBook.rmd' to understand the output data.frame in more detail.

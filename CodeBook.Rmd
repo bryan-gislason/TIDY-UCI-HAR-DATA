@@ -1,0 +1,37 @@
+---
+title: "CodeBook"
+author: "Bryan Gislason"
+date: "June 21, 2015"
+output: html_document
+keep_md: yes
+---
+
+## Project Description
+This project's goal was to create a tidy data set from the results of the project, "Human Activity Recognition Using Smartphones Dataset". The resulting data was an independent tidy data set with the average of each variable for each activity and each subject.
+ 
+###Collection of the raw data
+The raw data was derived from the train and test data for all subjects and activities and features.
+ 
+##Creating the tidy datafile
+The tidy data file, "tidyData.txt", was created by combining the test and training data with their respective subject and activity ids, and combining these data sets together.
+ 
+###Guide to create the tidy data file
+
+All of the original raw data is available in this repo. To create the tidyData.txt, fork this repo and run "source('run_analysis.R')" with the repo as the working directory.
+To create this tidy data set manually, follow these steps:
+1. Download the original raw data (here)[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip]
+2. Load the data for all of test/train files by using the read.table() command.
+3. Combine the subject, Y, and X data for both test & train data using the cbind (column bind) command, creating two individual train/test data sets.
+4. Merge these two data sets (train/test) together by row using rbind() command.
+5. Name the columns appropriately using the colnames() command, 'subject', 'activity', and the reading the features.txt file for the column names of the X data sets.]
+6. Select only the mean and standard deviation features from the data frame, finding the indices by using the grep() command in the 'features.txt' file.
+6. Relabel the activity column with their respective Labels (as they are integers to start), which can be found in the 'activity_labels.txt' file
+7. Aggregate this data.frame by subject and activity while applying the mean() command.
+ 
+##Description of the variables in the tiny_data.txt file
+**Dimensions** 180 x 81
+**Columns**
+- subject  (int): the subject of the study
+- activity (character): the labeled activity type that the subject was doing while the data was recorded
+
+The rest of the columns is the mean (int) for the all of the observations of the subject and activity for the mean and std of all of the features, which can be found in the 'features.txt' file.
